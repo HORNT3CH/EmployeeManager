@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DepartmentReclass>
+
+<h1>Department Reclass Hours</h1>
+
+<table>
+    <tr>
+        <th>Department</th>
+        <th>Employee</th>
+        <th>Reclass Hours</th>
+        <th>Reclass Date</th>
+    </tr>
+    @foreach (var reclass in Model)
+    {
+        <tr>
+            <td>@reclass.Department.DepartmentName</td>
+            <td>@reclass.Employee.FirstName @reclass.Employee.LastName</td>
+            <td>@reclass.ReclassHours</td>
+            <td>@reclass.ReclassDate</td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create">Add Reclass Hours</a>

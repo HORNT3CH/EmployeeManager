@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Attendance>
+
+<h1>Attendance Records</h1>
+
+<table>
+    <tr>
+        <th>Employee</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Points</th>
+    </tr>
+    @foreach (var attendance in Model)
+    {
+        <tr>
+            <td>@attendance.Employee.FirstName @attendance.Employee.LastName</td>
+            <td>@attendance.Status</td>
+            <td>@attendance.AttendanceDate</td>
+            <td>@attendance.Points</td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create">Add Attendance Record</a>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Position>
+
+<h1>Positions</h1>
+
+<table>
+    <tr>
+        <th>Position Name</th>
+    </tr>
+    @foreach (var position in Model)
+    {
+        <tr>
+            <td>@position.PositionName</td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create">Add New Position</a>

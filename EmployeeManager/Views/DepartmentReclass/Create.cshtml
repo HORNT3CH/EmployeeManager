@@ -1,0 +1,23 @@
+﻿@model DepartmentReclass
+
+<h1>Add Reclass Hours</h1>
+
+<form asp-action="Create">
+    <div>
+        <label for="DepartmentId">Department</label>
+        <select id="DepartmentId" asp-for="DepartmentId" asp-items="ViewBag.DepartmentId"></select>
+    </div>
+    <div>
+        <label for="EmployeeId">Employee</label>
+        <select id="EmployeeId" asp-for="EmployeeId" asp-items="ViewBag.EmployeeId"></select>
+    </div>
+    <div>
+        <label for="ReclassHours">Reclass Hours</label>
+        <input type="number" id="ReclassHours" name="ReclassHours" />
+    </div>
+    <div>
+        <label for="ReclassDate">Reclass Date</label>
+        <input type="date" id="ReclassDate" name="ReclassDate" />
+    </div>
+    <button type="submit">Save</button>
+</form>

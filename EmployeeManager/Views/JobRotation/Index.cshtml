@@ -1,0 +1,25 @@
+﻿@model IEnumerable<JobRotation>
+
+<h1>Job Rotations</h1>
+
+<table>
+    <tr>
+        <th>Employee</th>
+        <th>Job Role</th>
+        <th>Shift</th>
+        <th>Rotation Start</th>
+        <th>Rotation End</th>
+    </tr>
+    @foreach (var rotation in Model)
+    {
+        <tr>
+            <td>@rotation.Employee.FirstName @rotation.Employee.LastName</td>
+            <td>@rotation.JobRole</td>
+            <td>@rotation.Shift</td>
+            <td>@rotation.RotationStartDate</td>
+            <td>@rotation.RotationEndDate</td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create">Add Job Rotation</a>

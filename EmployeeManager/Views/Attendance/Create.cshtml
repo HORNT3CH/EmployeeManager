@@ -1,0 +1,25 @@
+﻿@model Attendance
+
+<h1>Add Attendance Record</h1>
+
+<form asp-action="Create">
+    <div>
+        <label for="EmployeeId">Employee</label>
+        <select id="EmployeeId" asp-for="EmployeeId" asp-items="ViewBag.EmployeeId"></select>
+    </div>
+    <div>
+        <label for="Status">Attendance Status</label>
+        <select id="Status" asp-for="Status">
+            <option value="CallOff">Call Off</option>
+            <option value="Tardy1Point">Tardy 1 Point</option>
+            <option value="Tardy2Points">Tardy 2 Points</option>
+            <option value="LeftEarly2Points">Left Early 2 Points</option>
+            <option value="LeftEarly4Points">Left Early 4 Points</option>
+        </select>
+    </div>
+    <div>
+        <label for="AttendanceDate">Attendance Date</label>
+        <input type="date" id="AttendanceDate" asp-for="AttendanceDate" />
+    </div>
+    <button type="submit">Save</button>
+</form>

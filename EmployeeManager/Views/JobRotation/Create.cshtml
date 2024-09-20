@@ -1,0 +1,31 @@
+﻿@model JobRotation
+
+<h1>Add Job Rotation</h1>
+
+<form asp-action="Create">
+    <div>
+        <label for="EmployeeId">Employee</label>
+        <select id="EmployeeId" asp-for="EmployeeId" asp-items="ViewBag.EmployeeId"></select>
+    </div>
+    <div>
+        <label for="JobRole">Job Role</label>
+        <input type="text" id="JobRole" name="JobRole" />
+    </div>
+    <div>
+        <label for="Shift">Shift</label>
+        <select id="Shift" asp-for="Shift">
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Night</option>
+        </select>
+    </div>
+    <div>
+        <label for="RotationStartDate">Rotation Start Date</label>
+        <input type="date" id="RotationStartDate" name="RotationStartDate" />
+    </div>
+    <div>
+        <label for="RotationEndDate">Rotation End Date</label>
+        <input type="date" id="RotationEndDate" name="RotationEndDate" />
+    </div>
+    <button type="submit">Save</button>
+</form>
